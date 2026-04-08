@@ -15,8 +15,8 @@ def get_player_pos() -> tuple[float, float, float]:
             for coordinate in coordinates:
                 final_coordinates = final_coordinates + [float(
                     coordinate.strip())]
-            x, y, z = final_coordinates
-            return (x, y, z)
+            return (final_coordinates[0],
+                    final_coordinates[1], final_coordinates[2])
         except ValueError as error:
             print(f"Error on parameter '{coordinate}': {error}")
 
